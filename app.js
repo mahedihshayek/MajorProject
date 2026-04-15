@@ -42,6 +42,8 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
+console.log("DB URL:", process.env.ATLASDB_URL);
+
 const sessionOptions = {
   store,
   secret: process.env.SECRET, 
